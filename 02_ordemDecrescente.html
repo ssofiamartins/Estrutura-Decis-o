@@ -5,23 +5,39 @@
     */
 
     //ENTRADA
-    const numeroUm = Number(prompt(`Informe um número:`));
-    const numeroDois = Number(prompt(`Informe outro número:`));
-    const numeroTres = Number (prompt(`Informe mais um número:`));
-
+    let numeroUm = Number(prompt(`Informe o primeiro número:`));
+    let numeroDois = Number(prompt(`Informe o segundo número: `));
+    let numeroTres = Number(prompt(`Informe o terceiro número:`));
+    
     //PROCESSAMENTO
-    if () {
-        alert()
-    } if else ( ) {
-        alert()
+    if (numeroUm >= numeroDois && numeroDois >= numeroTres) {
+        alert(`${numeroUm}, ${numeroDois}, ${numeroTres}.`);
+    } 
+    else if (numeroUm >= numeroTres && numeroTres >= numeroDois) {
+        alert(`${numeroUm}, ${numeroTres}, ${numeroDois}.`);
+    }
+    else if (numeroDois >= numeroUm && numeroUm >= numeroTres) {
+        alert(`${numeroDois}, ${numeroUm}, ${numeroTres}`);
+    }
+    else if (numeroDois >= numeroTres && numeroTres >= numeroUm) {
+        alert(`${numeroDois}, ${numeroTres}, ${numeroUm}`);
+    }
+    else if (numeroTres >= numeroDois && numeroDois >= numeroUm) {
+        alert(`${numeroTres}, ${numeroDois}, ${numeroUm}`);
+    } 
+    else (numeroTres >= numeroUm && numeroUm >= numeroDois) {
+        alert(`${numeroTres}, ${numeroUm}, ${numeroDois}`);
     }
 
     //SAÍDA
-    /*
-    1-2-3
-    1-3-2
-    2-1-3
-    2-3-1
-    3-1-2
-    3-2-1 */
+
+/*
+1-2-3
+1-3-2
+2-1-3
+2-3-1
+3-1-2
+3-2-1
+*/
+
 </script>
