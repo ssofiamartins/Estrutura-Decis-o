@@ -1,0 +1,61 @@
+<script>
+    /*
+    PROBLEMA: NÚMERO DE CENTENAS, DEZENAS E UNIDADES
+    Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+    Observando os termos no plural a colocação do "e", da vírgula entre outros.
+    
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades
+    Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    */
+
+    //ENTRADA
+    let numero = Number(prompt(`Informe um número inteiro menor que 1000:`));
+
+    //PROCESSAMENTO
+    
+
+    if (numero < 1000) {
+
+        if (numero >= 100) {
+            if (Math.floor(numero / 100) > 1) {
+                document.write( `${Math.floor(numero / 100)} centenas`);
+            } 
+            else if (Math.floor(numero / 100) == 1) {
+                document.write(`1 centena`);
+            }
+        }
+
+        if (numero >= 100 && Math.floor((numero / 10) % 10) > 0 && numero % 10 > 0) {
+            document.write(`, `);
+        } 
+        else if (numero >= 100 && Math.floor((numero / 10) % 10) > 0 || numero >= 100 && numero % 10 > 0) {
+            document.write(` e `);
+        }
+
+        if (Math.floor((numero / 10) % 10) > 1) {
+            document.write(`${Math.floor((numero / 10) % 10)} dezenas `);
+        } 
+        else if (Math.floor(numero / 10 % 10) == 1) {
+            document.write(`1 dezena`);
+        }
+
+        if (Math.floor((numero / 10) % 10) > 0 && numero % 10 > 0) {
+            document.write(` e `);
+        }
+
+        if (numero % 10 > 1) {
+            document.write(`${numero % 10} unidades `);
+        } 
+        else if (numero % 10 == 1) {
+            document.write(`1 unidade`);
+        }
+    } 
+    else {
+        alert(`Por favor informe um número que seja menor que 1000`);
+    }
+    
+    //SAÍDA
+
+</script>

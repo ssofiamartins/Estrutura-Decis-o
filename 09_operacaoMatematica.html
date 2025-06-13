@@ -1,0 +1,45 @@
+<script>
+    /*
+    PROBLEMA: OPERAÇÃO MATEMÁTICA
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
+     O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    - par ou ímpar;
+    - positivo ou negativo;
+    - inteiro ou decimal.
+    */
+
+    //ENTRADA
+    let numeroUm = Number(prompt(`Informe o primeiro número: `));
+    let numeroDois = Number(prompt(`Informe o segundo número: `));
+    let operacao = prompt(`Agora informe qual operação deseja realizar: (A - adição, S - subtração, M - multiplicação ou D - divisão) `);
+    let resultado = 0;
+
+    //PROCESSAMENTO
+    if (operacao == `A` || operacao == `S` || operacao == `M` || operacao == `D`) {
+        if (operacao == `A`) {
+            resultado = numeroUm + numeroDois;
+        } 
+        else if (operacao == `S`) {
+            resultado = numeroDois - numeroDois;
+        } 
+        else if (operacao == `M`) {
+            resultado = numeroUm * numeroDois;
+        } 
+        else if (operacao == `D`) {
+            resultado = numeroUm / numeroDois;
+        }
+
+        let parOuImpar = (resultado % 2 === 0) ? `par` : `ímpar`;
+        let positivoOuNegativo = (resultado >= 0) ? `positivo` : `negativo`;
+        let inteiroOuDecimal = (Number.isInteger(resultado)) ? `inteiro` : `decimal`;
+
+        alert(`O resultado da operação é ${resultado}. Que é um número ${parOuImpar}, ${positivoOuNegativo} e ${inteiroOuDecimal}.`);
+    } 
+    else {
+        alert(`Por favor use alguma das operações informadas anteriormente`);
+    }
+
+    //SAÍDA
+
+
+</script>

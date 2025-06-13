@@ -12,7 +12,7 @@
     */
 
     //ENTRADA
-    const turno = prompt(`Em que turno você estuda? M-matutino ou V-Vespertino ou N-Noturno `);
+    const turno = prompt(`Em que turno você estuda? (M) para matutino, (V) para vespertino ou (N) para noturno`);
     
     //PROCESSAMENTO
     if (turno == `M`) {
@@ -24,7 +24,7 @@
     else if (turno == `N`) {
         alert(`Boa Noite!`);
     } 
-    else (turno != ((turno == `M`) && (turno == `V`) && (turno == `N`)) ) {
+    else {
         alert(`Valor Inválido!`);
     }
 

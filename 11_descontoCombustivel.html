@@ -1,0 +1,57 @@
+<script>
+    /*
+    PROBLEMA: DESCONTO COMBUSTÍVEL
+    Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+    Álcool:
+    - até 20 litros, desconto de 3% por litro
+    - acima de 20 litros, desconto de 5% por litro
+
+    Gasolina:
+    - até 20 litros, desconto de 4% por litro
+    - acima de 20 litros, desconto de 6% por litro
+    
+    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 
+    o preço do litro do álcool é R$ 6,10.
+    */
+
+    //ENTRADA
+    const litros = Number(prompt(`Informe o número de litros vendidos: `));
+    const tipoCombustivel = Number(prompt(`Informe o tipo de combustível vendido: A-álcool, G-gasolina`));
+
+    //PROCESSAMENTO
+    const precoAlcool = 6.10;
+    const precoGasolina = 6.50;
+    
+    if ( tipoCombustivel == `A`) {
+        if ( litros <= 20 ) {
+           const precoUm = litros * precoAlcool;
+           const precoDescontoUm = precoUm - ( precoUm * 3 / 100 );
+           alert(`O valor a ser pego pelo cliente é de R$ ${precoDescontoUm}`);  
+        }
+        else {
+            const precoDois = litros * precoAlcool;
+            const precoDescontoDois = precoDois - ( precoDois * 5 / 100 );
+            alert(`O valor a ser pego pelo cliente é de R$ ${precoDescontoDois}`);
+        }
+    }
+    else if ( tipoCombustivel == `G`) {
+        if ( litros <= 20 ) {
+           const precoTres = litros * precoGasolina;
+           const precoDescontoTres = precoTres - ( precoTres * 4 / 100 );
+           alert(`O valor a ser pego pelo cliente é de R$ ${precoDescontoTres}`);  
+        }
+        else {
+            const precoQuatro = litros * precoGasolina;
+            const precoDescontoQuatro = precoQuatro - ( precoQuatro * 6 / 100 );
+            alert(`O valor a ser pego pelo cliente é de R$ ${precoDescontoQuatro}`);
+        }
+    }
+    else {
+        alert(`Tipo de combustível inválido.`);
+    }
+
+
+    
+    //SAÍDA
+
+</script>
